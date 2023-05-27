@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <title>Tra cứu đơn hàng</title>
+    <style>
+        .search-order .form-control {
+    border-radius: 0px;
+    font-family: NunitoSanRegular;
+    font-size: 16px;
+    color: #000;
+}
+
+.has-feedback .form-control {
+    padding-right: 42.5px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div style="height: 35px;" class="grid wide">
+                <div class="row">
+                    <div class="col c-6"></div>
+                    <div class="col c-6">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="search-order.html" class="menu_item-link">
+                                    Tra cứu đơn hàng
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="menu_item-link">
+                                    Tìm của hàng
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="listloveyour.html" class="menu_item-link">
+                                    yêu thích
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="login.html" class="menu_item-link">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="cart.html" class="menu_item-link">
+                                    Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="grid wide">
+                    <div style="align-items: center;
+                " class="row">
+                        <div class="group_menu c-4">
+                            <img src="./assets/images/Logo_Ananas_Header.svg" alt="">
+                        </div>
+                        <div class="group_menu c-4">
+                            <ul class="list_menu">
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="product-list.html">SẢN PHẨM</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">NAM</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">NỮ</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">SALE OFF</a></li>
+                                <li class="list_menu-item">
+                                    <img src="./assets/images/DiscoverYOU.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group_menu c-4">
+                            <input class="search" type="search" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide_small">
+            <div class="grid wide">
+                <i class="fa-solid fa-chevron-left"></i>
+                <a href="#" class="slide_small-link">BUY 2 GET 10% OFF - ÁP DỤNG VỚI TẤT CẢ BASIC TEE</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div class="grid wide">
+                <h2 class="title_h2">TRA CỨU ĐƠN HÀNG</h2>
+                <input required="" type="text" class="form-control text-uppercase" placeholder="Mã đơn hàng" id="order-code">
+                <input style="    margin-top: 32px;" required="" type="text" class="form-control" placeholder="Email / Số điện thoại" id="input">
+                <button style="background-color: #f15e2c; border: none; cursor: pointer; margin-left: 0;
+            " class="btn btn-search-order" data-usersearchorder="" data-action="user-search-order">TRA CỨU ĐƠN HÀNG</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="col c-3">
+                      <img src="./assets/images/Store.svg" alt="" class="footer_logo"> 
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">SẢN PHẨM</h2>
+                    <ul>
+                        <li class="footer_item">Giày Nam</li>
+                        <li class="footer_item">Giày Nữ</li>
+                        <li class="footer_item">Thời trang & Phụ kiện</li>
+                        <li class="footer_item">Sale-off</li>
+                    </ul>
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">HỖ TRỢ</h2>
+                    <ul>
+                        <li class="footer_item">FAQs</li>
+                        <li class="footer_item">Bảo mật thông tin</li>
+                        <li class="footer_item">Chính sách chung</li>
+                        <li class="footer_item">Tra cứu đơn hàng</li>
+                    </ul>
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">LIÊN HỆ</h2>
+                    <ul>
+                        <li class="footer_item">Email góp ý</li>
+                        <li class="footer_item">Hotline</li>
+                        <li class="footer_item">0368118034</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_end">
+                        <img class="very" src="./assets/images/icon_bocongthuong.png" alt="">
+                        Copyright &copy; 2023 Ananas. All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

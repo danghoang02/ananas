@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <title>Sản phẩm</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,300,400,500,600,700,800, 800i, 900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    position: relative;
+}
+
+.container .card {
+    position: relative;
+    width: 278px;
+    height: 340px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1BBFE9;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container .card:hover:before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.container .card:after {
+    content: "Nike";
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+
+}
+
+.container .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(-25%);
+    /* bug  */
+}
+
+.container .card .imgBx img {
+    position: absolute;
+    top: 27%;
+    left: 25%;
+    width: 123px;
+}
+.container .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+
+.container .card:hover .contentBx {
+    height: 210px;
+}
+
+.container .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+
+.container .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover {  /* other bug */
+    background: #B90000;
+}
+
+.container .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+     background: #1BBFE9;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+     background: #1B2FE9;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+     background: #080481;
+}
+
+.container .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.container .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .7s;
+} 
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div style="height: 35px;" class="grid wide">
+                <div class="row">
+                    <div class="col c-6"></div>
+                    <div class="col c-6">
+                        <ul class="menu_list">
+                            <li class="menu_item">
+                                <a href="search-order.html" class="menu_item-link">
+                                    Tra cứu đơn hàng
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="" class="menu_item-link">
+                                    Tìm của hàng
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="listloveyour.html" class="menu_item-link">
+                                    yêu thích
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="login.html" class="menu_item-link">
+                                    Đăng nhập
+                                </a>
+                            </li>
+                            <li class="menu_item">
+                                <a href="cart.html" class="menu_item-link">
+                                    Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="grid wide">
+                    <div style="align-items: center;
+                " class="row">
+                        <div class="group_menu c-4">
+                            <img src="./assets/images/Logo_Ananas_Header.svg" alt="">
+                        </div>
+                        <div class="group_menu c-4">
+                            <ul class="list_menu">
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="product-list.html">SẢN PHẨM</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">NAM</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">NỮ</a></li>
+                                <li class="list_menu-item">
+                                    <a class="list_menu-itemlink" href="#">SALE OFF</a></li>
+                                <li class="list_menu-item">
+                                    <img src="./assets/images/DiscoverYOU.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="group_menu c-4">
+                            <input class="search" type="search" placeholder="Tìm kiếm">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide_small">
+            <div class="grid wide">
+                <i class="fa-solid fa-chevron-left"></i>
+                <a href="#" class="slide_small-link">BUY 2 GET 10% OFF - ÁP DỤNG VỚI TẤT CẢ BASIC TEE</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+        <div style="margin-top: 0;" class="content">
+            <div class="row">
+                <div class="col c-3 product_item">
+                    <ul class="list">
+                        <li class="list_item active">TẤT CẢ</li>
+                        <li class="list_item">NAM</li>
+                        <li class="list_item">NỮ</li>
+                    </ul>
+                    <ul class="list_bot">
+                        <li class="item_bot">Accessories | Phụ kiện</li>
+                        <li class="item_bot">Footwear | Lên chân</li>
+                        <li class="item_bot">Top | Nửa trên</li>
+                    </ul>   
+                </div>
+                <div class="col c-9 product_item">
+                    <img class="product_item-img" src="./assets/images/desktop_productlist.jpg" alt="">
+                    <div class="row">
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr1.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr2.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr3.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="row">
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr4.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr9.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr5.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="row">
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr5.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr3.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr1.jpeg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;" class="row">
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr6.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr7.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col c-4">
+                            <div class="container">
+                                <div class="card">
+                                    <div class="imgBx">
+                                        <img src="./assets/images/pr8.jpg" alt="nike-air-shoe">
+                                    </div>
+                        
+                                    <div class="contentBx">
+                        
+                                        <h2>Ananas short</h2>
+                        
+                                        <div class="size">
+                                            <h3>Size :</h3>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                        
+                                        <div class="color">
+                        
+                                            <h3>Color :</h3>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                        <a href="#">Buy Now</a>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="col c-3">
+                      <img src="./assets/images/Store.svg" alt="" class="footer_logo"> 
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">SẢN PHẨM</h2>
+                    <ul>
+                        <li class="footer_item">Giày Nam</li>
+                        <li class="footer_item">Giày Nữ</li>
+                        <li class="footer_item">Thời trang & Phụ kiện</li>
+                        <li class="footer_item">Sale-off</li>
+                    </ul>
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">HỖ TRỢ</h2>
+                    <ul>
+                        <li class="footer_item">FAQs</li>
+                        <li class="footer_item">Bảo mật thông tin</li>
+                        <li class="footer_item">Chính sách chung</li>
+                        <li class="footer_item">Tra cứu đơn hàng</li>
+                    </ul>
+                </div>
+                <div class="col c-3">
+                    <h2 class="footer_title">LIÊN HỆ</h2>
+                    <ul>
+                        <li class="footer_item">Email góp ý</li>
+                        <li class="footer_item">Hotline</li>
+                        <li class="footer_item">0368118034</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_end">
+                        <img class="very" src="./assets/images/icon_bocongthuong.png" alt="">
+                        Copyright &copy; 2023 Ananas. All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
